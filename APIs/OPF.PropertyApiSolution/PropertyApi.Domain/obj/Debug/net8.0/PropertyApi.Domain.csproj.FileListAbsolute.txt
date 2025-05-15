@@ -1,0 +1,12 @@
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\bin\Debug\net8.0\PropertyApi.Domain.deps.json
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\bin\Debug\net8.0\PropertyApi.Domain.dll
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\bin\Debug\net8.0\PropertyApi.Domain.pdb
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\obj\Debug\net8.0\PropertyApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\obj\Debug\net8.0\PropertyApi.Domain.AssemblyInfoInputs.cache
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\obj\Debug\net8.0\PropertyApi.Domain.AssemblyInfo.cs
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\obj\Debug\net8.0\PropertyApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\obj\Debug\net8.0\PropertyApi.Domain.sourcelink.json
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\obj\Debug\net8.0\PropertyApi.Domain.dll
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\obj\Debug\net8.0\refint\PropertyApi.Domain.dll
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\obj\Debug\net8.0\PropertyApi.Domain.pdb
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Domain\obj\Debug\net8.0\ref\PropertyApi.Domain.dll

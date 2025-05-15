@@ -1,4 +1,5 @@
-﻿using PropertyApi.Domain.Entities;
+﻿using Microservice.SharedLibrary.Response;
+using PropertyApi.Domain.Entities;
 
 namespace PropertyApi.Infrastructure.Repositories.Interfaces
 {

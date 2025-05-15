@@ -7,7 +7,7 @@ namespace PropertyApi.Application.DTOs
         int Id,
         [Required] string Name,
         [Required] string Description,
-        [Required, Range(1, int.MaxValue)] int Area,
+        [Required, Range(0.1, float.MaxValue)] decimal Area,
         [Required] string Location,
         [Required, Range(1, int.MaxValue)] int NumberOfRooms,
         [Required, DataType(DataType.Currency)] decimal Price

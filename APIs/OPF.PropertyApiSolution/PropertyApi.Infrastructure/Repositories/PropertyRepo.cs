@@ -1,5 +1,8 @@
 ﻿using PropertyApi.Domain.Entities;
 using PropertyApi.Infrastructure.Repositories.Interfaces;
+using Microservice.SharedLibrary.Response;
+using Microservice.SharedLibrary.CURDHelper.Interfaces;
+
 
 namespace PropertyApi.Infrastructure.Repositories
 {

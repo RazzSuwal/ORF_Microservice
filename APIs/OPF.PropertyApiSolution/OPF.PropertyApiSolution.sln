@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyApi.Application", "PropertyApi.Application\PropertyApi.Application.csproj", "{B6BBF312-C03F-4819-9F43-A39ED0EDFBB2}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyApi.Infrastructure", "PropertyApi.Infrastructure\PropertyApi.Infrastructure.csproj", "{6202FAA5-6B75-4810-8E5D-205C8992038B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyApi.Presentation", "PropertyApi.Presentation\PropertyApi.Presentation.csproj", "{072E08B0-E217-40DC-BAFB-49C8EF7DDF51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.SharedLibrary", "..\ORF.SharedLibrary\ORF.SharedLibrary\Microservice.SharedLibrary.csproj", "{BD8203F3-A376-21C6-76F5-590A5131E6C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{072E08B0-E217-40DC-BAFB-49C8EF7DDF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{072E08B0-E217-40DC-BAFB-49C8EF7DDF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{072E08B0-E217-40DC-BAFB-49C8EF7DDF51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD8203F3-A376-21C6-76F5-590A5131E6C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8203F3-A376-21C6-76F5-590A5131E6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8203F3-A376-21C6-76F5-590A5131E6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8203F3-A376-21C6-76F5-590A5131E6C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

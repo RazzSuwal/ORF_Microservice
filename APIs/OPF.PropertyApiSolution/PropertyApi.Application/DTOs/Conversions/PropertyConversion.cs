@@ -1,4 +1,6 @@
-﻿namespace PropertyApi.Application.DTOs.Conversions
+﻿using PropertyApi.Domain.Entities;
+
+namespace PropertyApi.Application.DTOs.Conversions
 {
     public static class PropertyConversion
     {
@@ -21,10 +23,10 @@
                 var singlePropety = new PropertyDTO
                     (
                     property!.Id,
-                    property.Name,
-                    property.Description,
+                    property.Name!,
+                    property.Description!,
                     property.Area,
-                    property.Location,
+                    property.Location!,
                     property.NumberOfRooms,
                     property.Price
                     );
@@ -34,8 +36,8 @@
             //return list
             if (properties is not null || property is null)
             {
-                var _properties = properties.Select(p =>
-                    new PropertyDTO(p.Id, p.Name, p.Description, p.Area, p.Location, p.NumberOfRooms, p.Price)).ToList();
+                var _properties = properties!.Select(p =>
+                    new PropertyDTO(p.Id, p.Name!, p.Description!, p.Area, p.Location!, p.NumberOfRooms, p.Price)).ToList();
 
                 return (null, _properties);
             }

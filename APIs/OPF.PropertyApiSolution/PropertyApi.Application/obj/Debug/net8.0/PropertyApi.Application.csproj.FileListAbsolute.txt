@@ -1,0 +1,16 @@
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\bin\Debug\net8.0\PropertyApi.Application.deps.json
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\bin\Debug\net8.0\PropertyApi.Application.dll
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\bin\Debug\net8.0\PropertyApi.Application.pdb
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\bin\Debug\net8.0\PropertyApi.Domain.dll
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\bin\Debug\net8.0\PropertyApi.Domain.pdb
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\PropertyApi.Application.csproj.AssemblyReference.cache
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\PropertyApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\PropertyApi.Application.AssemblyInfoInputs.cache
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\PropertyApi.Application.AssemblyInfo.cs
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\PropertyApi.Application.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\PropertyApi.Application.sourcelink.json
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\Property.E782118F.Up2Date
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\PropertyApi.Application.dll
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\refint\PropertyApi.Application.dll
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\PropertyApi.Application.pdb
+C:\Users\Acer\source\repos\ORF\APIs\OPF.PropertyApiSolution\PropertyApi.Application\obj\Debug\net8.0\ref\PropertyApi.Application.dll

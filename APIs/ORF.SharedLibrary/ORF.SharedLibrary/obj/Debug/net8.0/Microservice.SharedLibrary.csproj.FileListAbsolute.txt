@@ -10,3 +10,4 @@ C:\Users\Acer\source\repos\ORF\APIs\ORF.SharedLibrary\ORF.SharedLibrary\obj\Debu
 C:\Users\Acer\source\repos\ORF\APIs\ORF.SharedLibrary\ORF.SharedLibrary\obj\Debug\net8.0\refint\Microservice.SharedLibrary.dll
 C:\Users\Acer\source\repos\ORF\APIs\ORF.SharedLibrary\ORF.SharedLibrary\obj\Debug\net8.0\Microservice.SharedLibrary.pdb
 C:\Users\Acer\source\repos\ORF\APIs\ORF.SharedLibrary\ORF.SharedLibrary\obj\Debug\net8.0\ref\Microservice.SharedLibrary.dll
+C:\Users\Acer\source\repos\ORF\APIs\ORF.SharedLibrary\ORF.SharedLibrary\obj\Debug\net8.0\Microservice.SharedLibrary.sourcelink.json
