@@ -6,8 +6,9 @@ namespace PropertyApi.Infrastructure.Repositories.Interfaces
     public interface IPropertyRepo
     {
         Task<Response> CreateAsync(Property entity);
-        Task<Response> CreateAsync(int id);
+        Task<Property> GetByIdAsync(int id);
         Task<IEnumerable<Property>> GetAllAsync();
         Task<Response> UpdateAsync(Property entity);
+        Task<Response> DeleteAsync(int id);
     }
 }

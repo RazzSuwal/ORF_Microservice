@@ -8,16 +8,9 @@ namespace Microservice.SharedLibrary.DependencyInjection
 {
     public static class SharedServiceContainer
     {
-        public static IServiceCollection AddSharedService<TContext>
-            (this IServiceCollection services, IConfiguration config, string fileName) where TContext : class //  TODO: No DbContext in Drapper need to change in future
+        public static IServiceCollection AddSharedService
+            (this IServiceCollection services, IConfiguration config, string fileName)
         {
-            //Add Generic Database context
-            //do from each microservice
-            //services.AddDbContext<TContext>(option => option.UseSqlServer(
-            //    config
-            //    .GetConnectionString("orfConnection"), sqlserverOption =>
-            //    sqlserverOption.EnableRetryOnFailure()));
-
             //configure
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
