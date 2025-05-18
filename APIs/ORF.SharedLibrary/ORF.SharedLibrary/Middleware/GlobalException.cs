@@ -45,7 +45,7 @@ namespace Microservice.SharedLibrary.Middleware
                     await ModifyHeader(context, title, message, statusCode);
                 }
 
-                await ModifyHeader(context, title, message, statusCode);
+                //await ModifyHeader(context, title, message, statusCode);
             }
             catch(Exception ex) 
             {

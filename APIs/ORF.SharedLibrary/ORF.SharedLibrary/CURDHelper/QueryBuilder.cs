@@ -58,16 +58,39 @@ namespace Microservice.SharedLibrary.CURDHelper
             };
         }
 
+        //public QueryRequest Insert<T>(T entity)
+        //{
+        //    var table = GetTableName(typeof(T));
+        //    var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+        //    var columns = string.Join(", ", props.Select(p => p.Name));
+        //    var values = string.Join(", ", props.Select(p => $"@{p.Name}"));
+
+        //    var parameters = new DynamicParameters();
+        //    foreach (var prop in props)
+        //        parameters.Add($"@{prop.Name}", prop.GetValue(entity));
+
+        //    return new QueryRequest
+        //    {
+        //        QuerySql = $"INSERT INTO {table} ({columns}) VALUES ({values})",
+        //        Parameters = parameters
+        //    };
+        //}
         public QueryRequest Insert<T>(T entity)
         {
             var table = GetTableName(typeof(T));
             var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
-            var columns = string.Join(", ", props.Select(p => p.Name));
-            var values = string.Join(", ", props.Select(p => $"@{p.Name}"));
+            // Skip properties where the name is "Id" and the type is int (common pattern for identity key)
+            var insertableProps = props
+                .Where(p => !(p.Name.Equals("Id", StringComparison.OrdinalIgnoreCase) && p.PropertyType == typeof(int)))
+                .ToList();
+
+            var columns = string.Join(", ", insertableProps.Select(p => p.Name));
+            var values = string.Join(", ", insertableProps.Select(p => $"@{p.Name}"));
 
             var parameters = new DynamicParameters();
-            foreach (var prop in props)
+            foreach (var prop in insertableProps)
                 parameters.Add($"@{prop.Name}", prop.GetValue(entity));
 
             return new QueryRequest
@@ -76,7 +99,6 @@ namespace Microservice.SharedLibrary.CURDHelper
                 Parameters = parameters
             };
         }
-
         public QueryRequest Update<T>(T entity, string keyColumn = "Id")
         {
             var table = GetTableName(typeof(T));

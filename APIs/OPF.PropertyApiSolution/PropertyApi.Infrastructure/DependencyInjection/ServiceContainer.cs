@@ -1,4 +1,6 @@
-﻿using Microservice.SharedLibrary.DependencyInjection;
+﻿using Microservice.SharedLibrary.CURDHelper.Interfaces;
+using Microservice.SharedLibrary.CURDHelper;
+using Microservice.SharedLibrary.DependencyInjection;
 using Microservice.SharedLibrary.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +28,7 @@ namespace PropertyApi.Infrastructure.DependencyInjection
             // Create Dependency Injection
 
             services.AddScoped<IPropertyRepo, PropertyRepo>();
+            services.AddScoped<ICURDHelper, CURDHelper>();
 
             return services;
         }
