@@ -2,7 +2,7 @@
 {
     public record LoginDTO
     (
-        string UserName,
+        string Email,
         string Password
     );
 }

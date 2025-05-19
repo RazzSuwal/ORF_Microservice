@@ -2,7 +2,7 @@
 
 namespace AuthenticationApi.Application.DTOs
 {
-    public record AppUserDTO
+    public record GetUserDTO
     (
         int Id,
         [Required] string FirstName,
@@ -10,7 +10,6 @@ namespace AuthenticationApi.Application.DTOs
         [Required] string MobileNumber,
         [Required] string Address,
         [Required, EmailAddress] string Email,
-        [Required] string Password,
         [Required] string Role
     );
 }
