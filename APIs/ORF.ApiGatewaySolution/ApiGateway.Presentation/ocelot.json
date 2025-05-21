@@ -1,0 +1,90 @@
+{
+  "Routes": [
+
+    // Jwt Authentication
+    {
+      "DownstreamPathTemplate": "/api/authentication/{everthing}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "locahost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/authentication/{everthing}",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "60s",
+        "Limit": 1,
+        "PeriodTimespan": 10
+      }
+    },
+
+    // Property Api
+
+    // Get Method avaliable for eveybody without authentication
+    {
+      "DownstreamPathTemplate": "/api/property",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "locahost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/property",
+      "UpstreamHttpMethod": [ "GET" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "ORF-Caching-Control"
+      }
+    },
+
+    //Get Property By ID Public to eveybody
+    {
+      "DownstreamPathTemplate": "/api/property/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "locahost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/property/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "ORF-Caching-Control"
+      }
+    },
+
+    // Property -> Post , Put , Delete all
+
+    {
+      "DownstreamPathTemplate": "/api/property/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "locahost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/property/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5003",
+    "RateLimitOptions": {      "QuotaExceededMessage" : "You are overwhelming me with mutiple request."
+    }
+  }
+}

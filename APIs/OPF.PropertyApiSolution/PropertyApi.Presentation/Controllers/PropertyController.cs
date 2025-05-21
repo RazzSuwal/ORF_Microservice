@@ -1,4 +1,5 @@
 ﻿using Microservice.SharedLibrary.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PropertyApi.Application.DTOs;
 using PropertyApi.Application.DTOs.Conversions;
@@ -8,6 +9,7 @@ namespace PropertyApi.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class PropertyController(IPropertyRepo propertyRepo) : ControllerBase
     {
         [HttpGet]
@@ -37,6 +39,7 @@ namespace PropertyApi.Presentation.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> CreateProperty(PropertyDTO property)
         {
             //check model state is all data annotations are passed
@@ -50,6 +53,7 @@ namespace PropertyApi.Presentation.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> UpdateProperty(PropertyDTO property)
         {
             //check model state is all data annotations are passed
@@ -63,6 +67,7 @@ namespace PropertyApi.Presentation.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> DeleteProperty(int id)
         {
             var property = await propertyRepo.GetByIdAsync(id);
