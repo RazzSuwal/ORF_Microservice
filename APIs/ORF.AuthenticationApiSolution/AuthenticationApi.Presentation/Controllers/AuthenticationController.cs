@@ -26,11 +26,11 @@ namespace AuthenticationApi.Presentation.Controllers
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var result = await userInterface.Login(loginDto);
-            return result.Flag ? Ok(result) : BadRequest(Request);
+            return result.Flag ? Ok(result) : BadRequest(result);
         }
 
-        [HttpGet("{id:int")]
-        [Authorize]
+        [HttpGet("GetUser/{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<GetUserDTO>> GetUser(int id)
         {
             if (id <= 0) return BadRequest("Invalid User Id");

@@ -3,15 +3,15 @@
 
     // Jwt Authentication
     {
-      "DownstreamPathTemplate": "/api/authentication/{everthing}",
+      "DownstreamPathTemplate": "/api/authentication/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "locahost",
+          "Host": "localhost",
           "Port": 5000
         }
       ],
-      "UpstreamPathTemplate": "/api/authentication/{everthing}",
+      "UpstreamPathTemplate": "/api/authentication/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST" ],
       "RateLimitOptions": {
         "ClientWhitelist": [],
@@ -30,7 +30,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "locahost",
+          "Host": "localhost",
           "Port": 5001
         }
       ],
@@ -49,7 +49,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "locahost",
+          "Host": "localhost",
           "Port": 5001
         }
       ],
@@ -69,7 +69,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "locahost",
+          "Host": "localhost",
           "Port": 5001
         }
       ],

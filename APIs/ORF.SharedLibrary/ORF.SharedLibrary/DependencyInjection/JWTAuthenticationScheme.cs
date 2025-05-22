@@ -23,12 +23,25 @@ namespace Microservice.SharedLibrary.DependencyInjection
                     {
                         ValidateIssuer = true,
                         ValidateAudience = true,
-                        ValidateLifetime = false,
+                        ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = issuer,
                         ValidAudience = audience,
                         IssuerSigningKey = new SymmetricSecurityKey(key)
                     };
+                    //options.Events = new JwtBearerEvents
+                    //{
+                    //    OnAuthenticationFailed = context =>
+                    //    {
+                    //        Console.WriteLine($"Authentication failed: {context.Exception}");
+                    //        return Task.CompletedTask;
+                    //    },
+                    //    OnTokenValidated = context =>
+                    //    {
+                    //        Console.WriteLine("Token validated successfully");
+                    //        return Task.CompletedTask;
+                    //    }
+                    //};
                 });
             return services;
         }

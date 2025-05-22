@@ -20,7 +20,17 @@ builder.Services.AddCors(options =>
 });
 var app = builder.Build();
 app.UseCors();
+
+app.UseAuthentication(); 
+app.UseAuthorization();
+
 app.UseMiddleware<AttachSignatureToRequest>();
+//app.Use(async (context, next) =>
+//{
+//    var authHeader = context.Request.Headers["Authorization"].ToString();
+//    Console.WriteLine($"[DEBUG] Auth Header: {authHeader}");
+//    await next();
+//});
 app.UseOcelot().Wait();
 app.UseHttpsRedirection();
 app.Run();

@@ -12,9 +12,19 @@ builder.Services.AddInfrastrutureService(builder.Configuration);
 var app = builder.Build();
 
 app.UseInfrastructurePolicy();
+
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
+
+//app.Use(async (context, next) =>
+//{
+//    var authHeader = context.Request.Headers["Authorization"].ToString();
+//    Console.WriteLine($"[DEBUG][PropertyAPI] Auth Header: {authHeader}");
+//    await next();
+//});
+
 app.MapControllers();
 app.Run();

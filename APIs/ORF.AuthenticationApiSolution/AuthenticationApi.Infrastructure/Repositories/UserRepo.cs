@@ -60,9 +60,9 @@ namespace AuthenticationApi.Infrastructure.Repositories
 
             var token = new JwtSecurityToken(
                 issuer: config["Authentication:Issuer"],
-                audience: config["AuthenticationApi:Audience"],
+                audience: config["Authentication:Audience"],
                 claims: claims,
-                expires: null,
+                expires: DateTime.UtcNow.AddHours(1),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

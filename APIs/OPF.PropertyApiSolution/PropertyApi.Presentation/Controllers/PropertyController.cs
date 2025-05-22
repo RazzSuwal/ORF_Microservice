@@ -38,7 +38,7 @@ namespace PropertyApi.Presentation.Controllers
             return _property is not null ? Ok(_property) : NotFound("No property found");
         }
 
-        [HttpPost]
+        [HttpPost("CreateProperty")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> CreateProperty(PropertyDTO property)
         {
