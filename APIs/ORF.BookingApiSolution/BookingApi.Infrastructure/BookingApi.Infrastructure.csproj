@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\ORF.SharedLibrary\ORF.SharedLibrary\Microservice.SharedLibrary.csproj" />
+    <ProjectReference Include="..\BookingApi.Application\BookingApi.Application.csproj" />
+  </ItemGroup>
+
 </Project>

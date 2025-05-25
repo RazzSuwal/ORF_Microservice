@@ -7,14 +7,9 @@ using PropertyApi.Infrastructure.Repositories.Interfaces;
 
 namespace PropertyApi.Infrastructure.Repositories
 {
-    public class PropertyRepo : IPropertyRepo
+    public class PropertyRepo(ICURDHelper helper) : IPropertyRepo
     {
-        private readonly ICURDHelper _helper;
-
-        public PropertyRepo(ICURDHelper helper)
-        {
-            _helper = helper;
-        }
+        private readonly ICURDHelper _helper = helper;
 
         public async Task<Response> CreateAsync(Property entity)
         {
