@@ -12,8 +12,8 @@ namespace BookingApi.Presentation.Controllers
     public class BookingController(IBookingRepo bookingRepo) : ControllerBase
     {
 
-        [HttpPost("CreateUpdateBooking")]
-        public async Task<ActionResult<Response>> CreateUpdateBooking(BookingDTO booking)
+        [HttpPost("CreateBooking")]
+        public async Task<ActionResult<Response>> CreateBooking(BookingDTO booking)
         {
             //check model state is all data annotations are passed
             if (!ModelState.IsValid)
@@ -21,15 +21,20 @@ namespace BookingApi.Presentation.Controllers
 
             //convert to entity
             var getEntity = BookingConversion.ToEntity(booking);
-            Response response;
-            if (booking.Id is null or 0)
-            {
-                response = await bookingRepo.CreateAsync(getEntity);
-            }
-            else
-            {
-                response = await bookingRepo.UpdateAsync(getEntity);
-            }
+            var response = await bookingRepo.CreateAsync(getEntity);
+            return response.Flag is true ? Ok(response) : BadRequest(response);
+        }
+
+        [HttpPut("UpdateBooking")]
+        public async Task<ActionResult<Response>> UpdateBooking(BookingDTO booking)
+        {
+            //check model state is all data annotations are passed
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            //convert to entity
+            var getEntity = BookingConversion.ToEntity(booking);
+            var response = await bookingRepo.UpdateAsync(getEntity);
             return response.Flag is true ? Ok(response) : BadRequest(response);
         }
     }

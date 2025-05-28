@@ -1,4 +1,5 @@
-﻿using BookingApi.Domain.Entities;
+﻿using BookingApi.Application.DTOs;
+using BookingApi.Domain.Entities;
 using BookingApi.Infrastructure.Respositories.Interfaces;
 using Microservice.SharedLibrary.CURDHelper.Interfaces;
 using Microservice.SharedLibrary.Logs;
@@ -27,6 +28,21 @@ namespace BookingApi.Infrastructure.Respositories
                 // display scary-free message in the client
                 return new Response(false, "Error occurred booling");
             }
+        }
+
+        public Task<IEnumerable<BookingDTO>> GeBookingByClientId(int bookBy)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<BookingDTO>> GeBookingByPropertyId(int propertyId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<BookingDTO> GeBookingDetails(int bookingId)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<Response> UpdateAsync(Booking entity)

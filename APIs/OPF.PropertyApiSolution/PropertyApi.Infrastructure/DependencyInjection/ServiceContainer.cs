@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using PropertyApi.Infrastructure.Data;
 using PropertyApi.Infrastructure.Repositories;
 using PropertyApi.Infrastructure.Repositories.Interfaces;
+using Confluent.Kafka;
 
 namespace PropertyApi.Infrastructure.DependencyInjection
 {
@@ -29,6 +30,10 @@ namespace PropertyApi.Infrastructure.DependencyInjection
 
             services.AddScoped<IPropertyRepo, PropertyRepo>();
             services.AddScoped<ICURDHelper, CURDHelper>();
+
+            var kafkaonfig = new ProducerConfig { BootstrapServers = "localhost:9092" };
+            services.AddSingleton<IProducer<Null, string>>
+                (x=> new ProducerBuilder<Null,string>(kafkaonfig).Build());
 
             return services;
         }

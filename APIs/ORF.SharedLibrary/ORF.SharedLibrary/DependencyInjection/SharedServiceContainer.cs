@@ -37,7 +37,7 @@ namespace Microservice.SharedLibrary.DependencyInjection
         {
             // Userglobal Exception
             app.UseMiddleware<GlobalException>();
-            app.UseMiddleware<ListenToOnlyApiGateway>();
+            //app.UseMiddleware<ListenToOnlyApiGateway>();
 
             return app;
         }

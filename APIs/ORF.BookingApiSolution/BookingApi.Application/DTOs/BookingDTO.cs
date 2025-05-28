@@ -4,9 +4,10 @@ namespace BookingApi.Application.DTOs
 {
     public record BookingDTO
     (
-        int? Id,
-        [Required] int PropertyId,
+        int Id,
+        [Required, Range(1, int.MaxValue)] int PropertyId,
         string? Description,
-        [Required] int BookBy
+        [Required, Range(1, int.MaxValue)] int BookBy,
+        DateTime BookOn
     );
 }
