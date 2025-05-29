@@ -8,8 +8,8 @@ namespace BookingApi.Infrastructure.Respositories.Interfaces
     {
         Task<Response> CreateAsync(Booking entity);
         Task<Response> UpdateAsync(Booking entity);
-        Task<IEnumerable<BookingDTO>> GeBookingByClientId(int bookBy);
-        Task<BookingDTO> GeBookingDetails(int bookingId);
-        Task<IEnumerable<BookingDTO>> GeBookingByPropertyId(int propertyId);
+        Task<IEnumerable<BookingDTO>> GetBookingByClientId(int bookBy);
+        Task<BookingDTO> GetBookingDetails(int bookingId);
+        Task<IEnumerable<BookingDetailsDTO>> GetBookingByPropertyId(int propertyId);
     }
 }

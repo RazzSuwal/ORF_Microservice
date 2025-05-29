@@ -37,5 +37,20 @@ namespace BookingApi.Presentation.Controllers
             var response = await bookingRepo.UpdateAsync(getEntity);
             return response.Flag is true ? Ok(response) : BadRequest(response);
         }
+
+        [HttpGet("GetBookingByPropertyId/{propertyId:int}")]
+        public async Task<ActionResult<IEnumerable<BookingDetailsDTO>>> GetBookingByPropertyId(int propertyId)
+        {
+            if (propertyId <= 0)
+                return BadRequest("Invalid property ID provided");
+
+            var bookingDetails = await bookingRepo.GetBookingByPropertyId(propertyId);
+
+            if (bookingDetails == null || !bookingDetails.Any())
+                return NotFound("No bookings found for the given property ID");
+
+            return Ok(bookingDetails);
+        }
+
     }
 }
